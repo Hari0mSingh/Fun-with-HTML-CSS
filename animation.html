@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 780px;
+            width: 1700px;
+            border: 3px solid black;
+            background: #918d8d;
+        }
+        .box{
+            height: 50px;
+            width: 150px;
+            background: #d35b5b;
+            border: 3px solid goldenrod;
+            margin: 5px;
+            margin-top: 10px;
+            border-radius: 5px;
+            position: relative;
+            animation-name: rightMovement;/*animation name */
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            /* animation-delay: 2s; */
+            /* animation-timing-function: ease-in; */
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            animation-timing-function: linear;
+            animation-direction: alternate-reverse;
+            animation-fill-mode: none;
+        }
+        .box1{
+            height: 50px;
+            width: 150px;
+            background: #d35b5b;
+            border: 3px solid goldenrod;
+            margin: 5px;
+            border-radius: 5px;
+            position: relative;
+            animation-name: leftMovement;/*animation name */
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            /* animation-delay: 2s; */
+            /* animation-timing-function: ease-in; */
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            animation-timing-function: linear;
+            animation-direction: alternate-reverse; 
+            animation-fill-mode: none;
+            /* animation: leftMovement 2s linear 1s 2 alternate none; */
+        }
+        .circle{
+            height: 50px;
+            width: 50px;
+            background: #d35b5b;
+            border: 3px solid goldenrod;
+            margin: 5px;
+            border-radius: 50px;
+            top: 200px;
+            left: 800px;
+            position: relative;
+            animation-name: circleMovement;/*animation name */
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate-reverse; 
+            animation-fill-mode: none;
+        }
+        @keyframes rightMovement {
+            from{
+                top: 0;
+                left: 0;
+            }
+            to{
+                top: 0;
+                left: 1450px;
+            }
+        }
+        @keyframes leftMovement {
+            from{
+                top: 640px;
+                left: 0;
+            }
+            to{
+                top: 640px;
+                left: 1450px;
+            }
+        }
+        @keyframes circleMovement {
+            0%{top: 1%;
+                left: 5%;
+            }
+            30%{top: 5%;
+                left: 95%;
+            }
+            60%{top: 90%;
+                left: 10%;
+            }
+            90%{top: 95%;
+                left: 50%;
+            }
+           
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+        </div>
+        <div class="box1"></div>
+        <div class="circle"></div>
+    </div>
+    
+</body>
+</html>
